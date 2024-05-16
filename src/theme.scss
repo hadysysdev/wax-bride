@@ -1,0 +1,27 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$primary-palette : mat.define-palette(mat.$cyan-palette);
+$secondary-palette : mat.define-palette(mat.$cyan-palette, 900);
+$accent-palette : mat.define-palette(mat.$lime-palette);
+$tertiary-palette : $secondary-palette;
+
+$theme: mat.define-dark-theme((
+  color: (
+    theme-type: dark,
+    primary: $primary-palette ,
+    secondary: $secondary-palette,
+    tertiary: $tertiary-palette,
+    accent: $accent-palette,
+  ),
+  typography: mat.define-typography-config(), 
+  density: (
+    scale: 0,
+  )
+));
+
+
+:root {
+  @include mat.all-component-themes($theme);
+}

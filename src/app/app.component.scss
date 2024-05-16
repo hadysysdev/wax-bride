@@ -1,0 +1,46 @@
+@use '@angular/material' as mat;
+@use '../theme.scss' as cus;
+
+
+:host{
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+
+    color: mat.get-color-from-palette(cus.$primary-palette, 900);
+    height: 100%;
+    width: 100%;
+
+    span {
+        color: mat.get-color-from-palette(cus.$secondary-palette, 600);
+    }
+
+    &-toolbar{
+        background: #004f4f;
+    }
+    // display: flex;
+    // flex-direction: column;
+
+}
+
+
+.bridge-view {
+    display: flex;
+    gap: 10px;
+    padding: 24px;
+    height: 100%;
+    width: 100%;
+    
+
+    .wax-token-login-view {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
